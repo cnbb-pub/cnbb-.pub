@@ -1,1 +1,1 @@
-# cnbb-.pub
+# cnbb.pub
