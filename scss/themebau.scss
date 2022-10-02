@@ -1,4 +1,7 @@
 @import "./variables";
+@import "./bootstrap/mixins/breakpoints";
+@import "./bootstrap/functions";
+@import "./bootstrap/variables";
 @import "plugin-bootstrap/variables";
 @import "_mixins/is-ie";
 @import "_mixins/is-safari";
