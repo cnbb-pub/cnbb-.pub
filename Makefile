@@ -38,6 +38,7 @@ ifndef GEN
 	$(error $(ZOLA_BINARY_ERROR))
 endif
 	@$(GEN) build -o $(PUBLISH_DIR)
+	@cp -r assets $(PUBLISH_DIR)/.
 
 serve:
 	@$(GEN) serve -o $(PUBLISH_DIR) -p $(PORT)
@@ -58,8 +59,8 @@ restore-book-git:
 	@mv -v $(TMP_GIT_DIR)/.git $(PUBLISH_DIR)/
 
 $(PUBLISH_DIR)/README.md:
-	@echo '# Content for the books.cnbb.pub site > $(PUBLISH_DIR)/README.md
-	@echo 'Published at [books.cnbb.pub/](http://books.cnbb.pub/)' >> $(PUBLISH_DIR)/README.md
+	@echo '# Content for the cnbb.pub site > $(PUBLISH_DIR)/README.md
+	@echo 'Published at [cnbb.pub/](http://cnbb.pub/)' >> $(PUBLISH_DIR)/README.md
 	@cd $(PUBLISH_DIR) && git add README.md
 
 commit:
