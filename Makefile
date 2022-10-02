@@ -37,6 +37,7 @@ build:
 ifndef GEN
 	$(error $(ZOLA_BINARY_ERROR))
 endif
+	@-sass scss:static/css/
 	@$(GEN) build -o $(PUBLISH_DIR)
 	@cp -r assets $(PUBLISH_DIR)/.
 
