@@ -1,6 +1,6 @@
 +++
 title = "C&B | Books"
-template = "index.html"
+template = "digital-agency.html"
 +++
 # Home
 
