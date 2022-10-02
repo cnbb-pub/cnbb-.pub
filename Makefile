@@ -9,8 +9,8 @@ BUILDER_BRANCH = builder
 TMP_GIT_DIR = /tmp/cnbb-site-git
 PORT = 5099
 AWS_PROFILE = cnbb
-S3_BUCKET = s3://books.cnbb.pub
-S3_REGION = us-east-2
+S3_BUCKET = s3://cnbb.pub
+S3_REGION = eu-north-1
 S3_ENDPOINT = $(S3_BUCKET).s3-website.$(S3_REGION).amazonaws.com
 
 define ZOLA_BINARY_ERROR
