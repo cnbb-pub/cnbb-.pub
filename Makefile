@@ -33,6 +33,8 @@ Install $(AWS_BIN):
 
 endef
 
+default: build-publish
+
 build:
 ifndef GEN
 	$(error $(ZOLA_BINARY_ERROR))
