@@ -41,7 +41,7 @@ endif
 	@$(GEN) build -o $(PUBLISH_DIR)
 	@cp -r assets $(PUBLISH_DIR)/.
 
-serve:
+serve: build
 	@$(GEN) serve -o $(PUBLISH_DIR) -p $(PORT)
 
 run: serve
@@ -74,7 +74,7 @@ ifndef DEPLOYER
 	$(error $(AWS_BINARY_ERROR))
 endif
 	@$(AWS_BIN) --profile=$(AWS_PROFILE) --region=$(S3_REGION) \
-		s3 sync $(PUBLISH_DIR)/ $(S3_BUCKET)
+	s3 sync $(PUBLISH_DIR)/ $(S3_BUCKET)
 
 build-publish: clean build commit publish
 
