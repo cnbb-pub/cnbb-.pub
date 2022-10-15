@@ -39,7 +39,6 @@ ifndef GEN
 endif
 	@-sass scss:static/css/
 	@$(GEN) build -o $(PUBLISH_DIR)
-	@cp -r assets $(PUBLISH_DIR)/.
 
 serve: build
 	@$(GEN) serve -o $(PUBLISH_DIR) -p $(PORT)
